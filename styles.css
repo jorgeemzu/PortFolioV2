@@ -1,0 +1,330 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--green: rgb(18, 198, 183);
+	--overlay: rgba(18, 198, 183, 0.9);
+	--black: #333333;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.container {
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+header {
+	background-image: url('images/559.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.green__overlay {
+	background-color: rgba(18, 198, 183, 0.9);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.hero {
+	padding: 3em 0;
+}
+
+.menu {
+	position: absolute;
+	overflow: hidden;
+	top: 60px;
+	width: 100%;
+	background-color: white;
+	z-index: 100;
+	height: 0;
+	transition: 0.5s ease-in;
+}
+
+.hero__menu--item a {
+	color: rgb(18, 198, 183);
+
+	letter-spacing: 5px;
+	display: block;
+	padding: 0.7em;
+}
+
+.hero__menu--item + .hero__menu--item {
+	margin-top: 1.5em;
+}
+
+.showMenu {
+	height: 300px;
+	padding: 3em 1em;
+	transition: 0.5s ease-in;
+}
+
+.logo {
+	width: 30%;
+}
+
+.hamburger {
+	background-image: url('images/bars-solid.svg');
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transition: 0.5s ease-in;
+}
+
+.rotate_hamburger {
+	transform: rotate(360deg);
+	background-image: url('images/times-solid.svg');
+}
+
+.hero__text {
+	text-align: center;
+	margin-top: 4em;
+}
+
+h1 {
+	font-family: 'Bebas Neue';
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	font-size: 3.1rem;
+	letter-spacing: 6px;
+	line-height: 46px;
+}
+
+.hero__text p {
+	color: #333333;
+	margin-top: 2em;
+	font-size: 1.3rem;
+	margin-bottom: 3em;
+}
+
+.hero__text span {
+	font-weight: 900;
+	display: block;
+}
+
+.hero__circle {
+	position: absolute;
+	top: -130px;
+	left: -130px;
+}
+
+.hero__btn {
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+	padding: 0.5em 0;
+}
+
+.hero__btn a {
+	color: #333333;
+	font-weight: 900;
+}
+
+main {
+	padding-top: 3em;
+	text-align: center;
+	overflow: hidden;
+}
+
+.underLine {
+	position: relative;
+	padding: 0.3em 0;
+	margin-bottom: 4em;
+}
+
+.underLine::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 8px;
+	width: 60%;
+	height: 3px;
+	background-color: var(--green);
+}
+
+.services {
+	position: relative;
+	padding-bottom: 8em;
+}
+
+.service__item {
+	display: grid;
+	grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+	justify-items: center;
+}
+
+.service__item + .service__item {
+	margin-top: 5em;
+}
+
+.icon__container {
+	margin-bottom: 2em;
+}
+
+.icon__container i {
+	transform: rotate(-45deg);
+	color: var(--green);
+}
+
+.icon__container div {
+	font-size: 2rem;
+	padding: 0.8em;
+	border: solid 2px var(--green);
+	width: 95px;
+	height: 95px;
+	transform: rotate(45deg);
+	/* margin: 0 auto; */
+}
+
+.service__item h2 {
+	margin-bottom: 0.7em;
+}
+
+.btn__service {
+	display: flex;
+	align-items: flex-end;
+	color: var(--green);
+	margin-top: 1.6em;
+}
+
+.btn__service a {
+	color: var(--green);
+	margin-right: 0.8em;
+}
+
+.dot__img {
+	position: absolute;
+	transform: rotate(90deg);
+	bottom: 0;
+	right: -84px;
+}
+
+.dot__img img {
+	width: 35%;
+}
+
+.job__item + .job__item {
+	margin-top: 3em;
+}
+
+.job__item img {
+	border: solid 3px var(--green);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	margin-bottom: 1em;
+}
+
+.job__item a {
+	color: var(--green);
+	font-weight: 300;
+}
+
+.contact {
+	margin-top: 3em;
+	background-image: url('images/23053.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: left;
+	color: white;
+}
+
+form {
+	padding: 3em 0;
+}
+
+form h2 {
+}
+
+form label {
+	display: block;
+	margin: 0.7em 0;
+}
+
+form input,
+textarea {
+	background: transparent;
+	outline: none;
+	border: solid 2px white;
+	padding: 0.5em 0.8em;
+	color: var(--black);
+	font-size: 1.12rem;
+}
+
+form button {
+	background: white;
+	padding: 0.8em 1em;
+	border: none;
+	margin-top: 2em;
+	font-weight: 400;
+}
+
+footer {
+	background: var(--black);
+	text-align: center;
+	padding: 2em 0;
+}
+
+footer i {
+	color: white;
+	font-size: 1.5rem;
+	margin-bottom: 0.5em;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+.info {
+	margin-bottom: 2em;
+}
+
+.info__item + .info__item {
+	margin-top: 1.7em;
+}
+
+.footer__menu a,
+.footer__services a {
+	color: var(--green);
+}
+
+.footer__menu--item + .footer__menu--item {
+	margin-top: 1em;
+}
+
+.footer__services p {
+	margin: 3em 0 2em 0;
+	color: white;
+}
