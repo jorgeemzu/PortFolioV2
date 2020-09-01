@@ -14,8 +14,8 @@
 	</head>
 	<body>
 		<header>
-			<div class="green__overlay">
-				<div class="container">
+			<div class="green__overlay flex__center">
+				<div class="container flex__center">
 					<div class="hero">
 						<nav>
 							<div class="logo">
@@ -49,8 +49,8 @@
 		<main>
 			<section class="services">
 				<div class="container">
+					<h2 class="underLine">Como Podemos Ayudarte</h2>
 					<div class="services__container">
-						<h2 class="underLine">Como Podemos Ayudarte</h2>
 						<div class="service__item">
 							<div class="icon__container">
 								<div>
@@ -110,10 +110,20 @@
 
 			<section class="jobs">
 				<div class="container">
-					<div class="jobs__container">
+					<h2 class="underLine">Conoce Nuestro Trabajo</h2>
+					<div class="jobs__container services__container">
 						<div class="job__item">
 							<img src="images/dubri.png" alt="Client Image" />
-							<a href="">@DPOLOAGENT</a>
+							<div class="job__item--info">
+								<div>
+									<h2>Dubrasca Polo</h2>
+									<p>
+										Desarrollaremos tu sitio web segun tus necesidades, asegurandonos que recibas visitas online con la
+										seguridad de mantener tu sitio fresco y actualizado
+									</p>
+									<a href="">Visita su Pagina</a>
+								</div>
+							</div>
 						</div>
 
 						<div class="job__item">
@@ -132,34 +142,34 @@
 			<section class="contact">
 				<div class="green__overlay">
 					<div class="container">
-						<form action="">
+						<div class="contact__container">
 							<h2>Mantente en Contacto</h2>
 							<form name="contact" method="POST" data-netlify="true">
-								<p class="form__nombre">
+								<div class="form__nombre">
 									<label>Nombre</label>
 									<input type="text" name="nombre" required />
-								</p>
+								</div>
 
-								<p class="form__apellido">
+								<div class="form__apellido">
 									<label>Apellido</label>
 									<input type="text" name="apellido" required />
-								</p>
+								</div>
 
-								<p class="form__email">
+								<div class="form__email">
 									<label>Email</label>
 									<input type="email" name="email" required />
-								</p>
+								</div>
 
-								<p class="form__mensaje">
+								<div class="form__mensaje">
 									<label>Mensaje</label>
 									<textarea name="mensaje" id="" cols="30" rows="10" required></textarea>
-								</p>
+								</div>
 
-								<p class="form__btn">
+								<div class="form__btn">
 									<button type="submit" class="btn__green">ENVIAR</button>
-								</p>
+								</div>
 							</form>
-						</form>
+						</div>
 					</div>
 				</div>
 			</section>
