@@ -18,6 +18,7 @@ html {
 body {
 	box-sizing: border-box;
 	font-family: 'Lato', sans-serif;
+	color: var(--black);
 }
 
 img {
@@ -47,6 +48,13 @@ header {
 	margin-bottom: -5em;
 }
 
+.noMargin {
+	margin: 0;
+}
+
+.about__nav {
+	padding: 3em 0;
+}
 .green__overlay {
 	background-color: rgba(18, 198, 183, 0.9);
 }
@@ -233,6 +241,16 @@ main {
 	text-align: center;
 }
 
+.service__item:hover .icon__container div {
+	background: var(--green);
+}
+
+.service__item:hover .icon__container i {
+	color: white;
+
+	transform: rotate(317deg);
+}
+
 .icon__container {
 	margin-bottom: 2em;
 }
@@ -240,6 +258,7 @@ main {
 .icon__container i {
 	transform: rotate(-45deg);
 	color: var(--green);
+	transition: 0.5s all;
 }
 
 .icon__container div {
@@ -250,6 +269,7 @@ main {
 	height: 95px;
 	transform: rotate(45deg);
 	margin: 0 auto;
+	transition: 0.5s all;
 }
 
 .service__item h2 {
@@ -305,7 +325,7 @@ main {
 	z-index: 10;
 }
 
-.jobs::after {
+/* .jobs::after {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -315,7 +335,7 @@ main {
 
 	background-color: var(--green);
 	z-index: -1;
-}
+} */
 
 .job__item {
 	transition: 0.5s all;
@@ -410,6 +430,48 @@ main {
 }
 
 .job__item--info ul li {
+	margin-top: 1em;
+}
+
+.section__planes {
+	margin: 6em 0;
+}
+
+.planes {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 2em;
+}
+
+.plan__container {
+	background-color: var(--green);
+	padding: 4em 3em;
+	border-radius: 10px;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+	color: white;
+	transition: 0.5s all;
+}
+
+.plan__container:hover {
+	transform: scale(1.1);
+}
+
+.plan__container h2 {
+	margin: 0.7em 0;
+	font-size: 3rem;
+}
+
+.plan__span {
+	font-weight: 400;
+	display: block;
+	font-size: 1.3rem;
+}
+
+.plan__container ul {
+	text-align: left;
+}
+
+.plan__container--item + .plan__container--item {
 	margin-top: 1em;
 }
 
@@ -509,7 +571,7 @@ footer a {
 .web__design {
 	position: relative;
 	z-index: 100;
-	margin-bottom: 3em;
+	margin: 3em 0;
 }
 
 .web__design .green__overlay {
@@ -541,6 +603,46 @@ h2 span {
 	background: transparent;
 	color: white;
 }
+
+/* Inicio Estilos pagina About */
+.us {
+	margin: 3em 0;
+}
+
+.us__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	gap: 4em;
+	align-items: center;
+	justify-items: center;
+	padding: 2em 0;
+	text-align: justify;
+}
+
+.green__bg {
+	background-color: var(--green);
+	padding: 2em 0;
+	color: white;
+}
+
+.us .green__bg {
+	margin-top: 4em;
+}
+
+.us__grid h2 {
+	text-align: center;
+	font-size: 2.4rem;
+	width: 80%;
+}
+
+.us__grid p {
+	font-size: 2rem;
+}
+
+.green__header {
+	color: var(--green);
+}
+/* Inicio Estilos pagina About */
 
 @media (max-width: 900px) {
 	.menu {
@@ -588,6 +690,18 @@ h2 span {
 	}
 
 	.web__design a {
+		margin-top: 2em;
+	}
+
+	.us__grid {
+		text-align: left;
+	}
+
+	.us__grid h2 {
+		margin-bottom: 1em;
+	}
+
+	.us__grid + .us__grid {
 		margin-top: 2em;
 	}
 }
@@ -666,7 +780,7 @@ h2 span {
 	}
 
 	.hero__text {
-		margin-top: 7em;
+		margin-top: 5em;
 	}
 
 	h1 {
@@ -730,7 +844,6 @@ h2 span {
 	.form__nombre,
 	.form__apellido {
 		display: inline-block;
-		width: 40%;
 	}
 
 	.form__nombre input,
@@ -738,9 +851,9 @@ h2 span {
 		max-width: 100%;
 	}
 
-	.form__nombre {
+	/* .form__nombre {
 		margin-right: 2em;
-	}
+	} */
 
 	.form__email,
 	.form__mensaje {
