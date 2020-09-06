@@ -641,11 +641,13 @@ h2 span {
 /* Inicio Estilos pagina About */
 .us {
 	margin: 3em 0;
+	position: relative;
+	z-index: -1;
 }
 
 .us__grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	gap: 4em;
 	align-items: center;
 	justify-items: center;
