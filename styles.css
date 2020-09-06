@@ -506,9 +506,17 @@ main {
 	background-position: center;
 	text-align: left;
 	color: white;
-	position: relative;
+
 	margin-top: -8em;
-	z-index: -1;
+}
+
+.planes__about {
+	margin-bottom: 12em;
+}
+
+.contact__info {
+	position: relative;
+	z-index: 100;
 }
 
 .contact__container {
